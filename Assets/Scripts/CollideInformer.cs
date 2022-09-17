@@ -1,12 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class CollideInformer : MonoBehaviour
 {
     private AudioSource audioSource;
-   // Camera cam;
+    Camera cam;
+    private GameObject player;
+    private bool isKeyPressed = false;
+
 
     enum Side {
         Right, 
@@ -15,8 +17,9 @@ public class CollideInformer : MonoBehaviour
 
     public void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
-       // cam = Camera.main;
+       audioSource = GetComponent<AudioSource>();
+       cam = Camera.main;
+       player = GameObject.FindGameObjectWithTag("Player");
     }
 
     [SerializeField] Side side;
@@ -28,20 +31,30 @@ public class CollideInformer : MonoBehaviour
         if(other.tag == "Player")
         {
             Debug.Log("Player Entered !!");
-            canvasText.text = "Press <color=#E0E300>[E]</color> to open the door!";
+            canvasText.text = "Kapýyý açmak için <color=#E0E300>[E]</color> tuþuna basýn";
             canvasText.gameObject.SetActive(true);
         }        
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        
         if (other.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.E))
+            if (!isKeyPressed && Input.GetKey(KeyCode.E))
             {
+                isKeyPressed = true;
                 DoorAnimator.SetBool("Transition", true);
                 audioSource.Play();
-                moveCharacterNextRoom(other.gameObject);
+                StartCoroutine(MoveCharacterNextRoom());
+
+
+
+            }
+
+            if(Input.GetKeyUp(KeyCode.E))
+            {
+                isKeyPressed = false;
             }
 
         }
@@ -52,12 +65,23 @@ public class CollideInformer : MonoBehaviour
         canvasText.text = "";
         canvasText.gameObject.SetActive(false);
         DoorAnimator.SetBool("Transition", false);
+        isKeyPressed = false;
     }
     
-    private void moveCharacterNextRoom(GameObject player){
-        if(side == Side.Left){
-            player.transform.position.x = player.transform.position.x - 1920f;
-        } else player.transform.position.x = player.transform.position.x + 1920f;
+    private IEnumerator MoveCharacterNextRoom(){
+        yield return new WaitForSeconds(1);
+        if (side == Side.Left)
+        {
+            
+            //player.transform.position.x = player.transform.position.x - 1920f;
+            player.transform.position += new Vector3(-5f, 0, 0);
+            cam.transform.position += new Vector3(-15.75f, 0, 0);
+        }
+        else
+        {
+            player.transform.position += new Vector3(5f, 0, 0);
+            cam.transform.position += new Vector3(15.75f, 0, 0);
+        }
     }
 }
 
