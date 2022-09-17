@@ -39,10 +39,11 @@ public class CollideInformer : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 Debug.Log("Key E Pressed");
-                DoorAnimator.gameObject.SetActive(true);
-                DoorAnimator.SetTrigger("Transition");
+                DoorAnimator.SetBool("Transition", true);
+                Debug.Log("Kaç kez bak " + DoorAnimator.GetBool("Transition"));
                 audioSource.Play();
             }
+
         }
     }
 
@@ -51,6 +52,8 @@ public class CollideInformer : MonoBehaviour
         Debug.Log("Player Left !!");
         canvasText.text = "";
         canvasText.gameObject.SetActive(false);
+        DoorAnimator.SetBool("Transition", false);
+        Debug.Log("Kaç kez bak " + DoorAnimator.GetBool("Transition"));
 
     }
 }
