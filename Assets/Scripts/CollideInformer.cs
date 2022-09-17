@@ -6,7 +6,7 @@ using UnityEngine;
 public class CollideInformer : MonoBehaviour
 {
     private AudioSource audioSource;
-    
+   // Camera cam;
 
     enum Side {
         Right, 
@@ -16,6 +16,7 @@ public class CollideInformer : MonoBehaviour
     public void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+       // cam = Camera.main;
     }
 
     [SerializeField] Side side;
@@ -38,10 +39,9 @@ public class CollideInformer : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                Debug.Log("Key E Pressed");
                 DoorAnimator.SetBool("Transition", true);
-                Debug.Log("Kaç kez bak " + DoorAnimator.GetBool("Transition"));
                 audioSource.Play();
+                moveCharacterNextRoom(other.gameObject);
             }
 
         }
@@ -49,12 +49,15 @@ public class CollideInformer : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Player Left !!");
         canvasText.text = "";
         canvasText.gameObject.SetActive(false);
         DoorAnimator.SetBool("Transition", false);
-        Debug.Log("Kaç kez bak " + DoorAnimator.GetBool("Transition"));
-
+    }
+    
+    private void moveCharacterNextRoom(GameObject player){
+        if(side == Side.Left){
+            player.transform.position.x = player.transform.position.x - 1920f;
+        } else player.transform.position.x = player.transform.position.x + 1920f;
     }
 }
 
