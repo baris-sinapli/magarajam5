@@ -54,14 +54,19 @@ public class CharacterMovement : MonoBehaviour
 	{
 
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-		if (Input.anyKey)
+		if (Input.GetKey(KeyCode.A)
+			|| Input.GetKey(KeyCode.LeftArrow)
+			|| Input.GetKey(KeyCode.D)
+			|| Input.GetKey(KeyCode.RightArrow))
 		{
 			animator.SetBool("IsWalking", true);
 			holdingDown = true;
 		}
 
-		if (!Input.anyKey && holdingDown)
+		if (!(Input.GetKey(KeyCode.A)
+			|| Input.GetKey(KeyCode.LeftArrow)
+			|| Input.GetKey(KeyCode.D)
+			|| Input.GetKey(KeyCode.RightArrow)) && holdingDown)
 		{
 			animator.SetBool("IsWalking", false);
 			holdingDown = false;
