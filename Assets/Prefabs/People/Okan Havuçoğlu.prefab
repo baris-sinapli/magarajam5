@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6545845970194421640}
   - component: {fileID: 6545845970194421643}
+  - component: {fileID: 6979045398487339513}
   - component: {fileID: 6545845970194421642}
   m_Layer: 0
   m_Name: "Okan Havu\xE7o\u011Flu"
@@ -85,6 +86,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6979045398487339513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6545845970194421645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b5df6498e10bb41883135c3effb6cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFinished: 0
 --- !u!95 &6545845970194421642
 Animator:
   serializedVersion: 4

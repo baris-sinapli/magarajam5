@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class CutsceneManager : MonoBehaviour
 {
-    [SerializeField] private GameObject BackgroundUI;
-    private void Start()
+    public bool isFinished;
+
+    private void Update()
     {
-        BackgroundUI.SetActive(false);
+       
+        isFinished = true;
     }
 
 }

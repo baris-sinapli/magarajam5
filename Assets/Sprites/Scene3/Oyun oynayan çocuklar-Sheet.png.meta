@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_0"
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 346
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56d2e860e5806d4ab57d7d4916e40e7
+      internalID: 1772307882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_1"
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 0
+        width: 346
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21580c2c065eda344952c9d9271d18d2
+      internalID: -1440333844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_2"
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 0
+        width: 344
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15cd958ab6fd58740b94a68a2825bd74
+      internalID: 1558223860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_3"
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 0
+        width: 346
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0e942118437774fbf3e53d04e1678e
+      internalID: 1248434157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_4"
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 0
+        width: 346
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fb6301409bf0248b2469c698ef2f96
+      internalID: 94702807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_5"
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 0
+        width: 344
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817d49d8a902be9408e41736079f3608
+      internalID: -1280772094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_6"
+      rect:
+        serializedVersion: 2
+        x: 2237
+        y: 0
+        width: 346
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7493fc204b8ac564fb23ca70cc1d90cd
+      internalID: 542109920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_7"
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 0
+        width: 346
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb04a7e31ed53347b60546fb16e6188
+      internalID: -1973660844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_8"
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 0
+        width: 344
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dceb5da4a5043b941b913374ebd96f99
+      internalID: -850254256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_9"
+      rect:
+        serializedVersion: 2
+        x: 3347
+        y: 0
+        width: 346
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03d55dee1a956041b7a015d49aab2c7
+      internalID: -293904792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_10"
+      rect:
+        serializedVersion: 2
+        x: 3717
+        y: 0
+        width: 346
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5641d211ab87871438af1e0233e8ed13
+      internalID: 1852089247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Oyun oynayan \xE7ocuklar-Sheet_11"
+      rect:
+        serializedVersion: 2
+        x: 4088
+        y: 0
+        width: 344
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c1527333b070c469d4aa0c47518af1
+      internalID: 182013688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +378,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Oyun oynayan \xE7ocuklar-Sheet_6": 542109920
+      "Oyun oynayan \xE7ocuklar-Sheet_9": -293904792
+      "Oyun oynayan \xE7ocuklar-Sheet_5": -1280772094
+      "Oyun oynayan \xE7ocuklar-Sheet_2": 1558223860
+      "Oyun oynayan \xE7ocuklar-Sheet_3": 1248434157
+      "Oyun oynayan \xE7ocuklar-Sheet_1": -1440333844
+      "Oyun oynayan \xE7ocuklar-Sheet_7": -1973660844
+      "Oyun oynayan \xE7ocuklar-Sheet_0": 1772307882
+      "Oyun oynayan \xE7ocuklar-Sheet_4": 94702807
+      "Oyun oynayan \xE7ocuklar-Sheet_8": -850254256
+      "Oyun oynayan \xE7ocuklar-Sheet_10": 1852089247
+      "Oyun oynayan \xE7ocuklar-Sheet_11": 182013688
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
