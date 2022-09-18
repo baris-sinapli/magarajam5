@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollideInformer : MonoBehaviour
 {
@@ -35,7 +36,10 @@ public class CollideInformer : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            canvasText.text = "Kapýyý açmak için <color=#E0E300>[E]</color> tuþuna basýn";
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Scene01")) { canvasText.text = "Kapýyý açmak için <color=#E0E300>[E]</color> tuþuna basýn"; }
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Scene02")) { canvasText.text = "Bahçede dolaþmak için <color=#E0E300>[E]</color> tuþuna basýn"; }
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Scene03")) { canvasText.text = "Kapýyý açmak için <color=#E0E300>[E]</color> tuþuna basýn"; }
+                        
             canvasText.gameObject.SetActive(true);
         }        
     }
@@ -49,7 +53,10 @@ public class CollideInformer : MonoBehaviour
             {
                 isKeyPressed = true;
                 DoorAnimator.SetBool("Transition", true);
-                audioSource.Play();
+                if(audioSource != null)
+                {
+                    audioSource.Play();
+                }
                 StartCoroutine(MoveCharacterNextRoom());
                 // Animation triggering
                 if(animator != null)
