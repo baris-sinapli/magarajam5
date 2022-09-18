@@ -25,12 +25,16 @@ public class CollideInformer : MonoBehaviour
     [SerializeField] Side side;
     [SerializeField] private TextMeshProUGUI canvasText;
     [SerializeField] private Animator DoorAnimator;
+    [Header("Animation Trigger")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private string parameterName;
+    [SerializeField] private int requriedLevel;
+    private bool animationCompleted = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")
         {
-            Debug.Log("Player Entered !!");
             canvasText.text = "Kapýyý açmak için <color=#E0E300>[E]</color> tuþuna basýn";
             canvasText.gameObject.SetActive(true);
         }        
@@ -41,15 +45,22 @@ public class CollideInformer : MonoBehaviour
         
         if (other.tag == "Player")
         {
-            if (!isKeyPressed && Input.GetKey(KeyCode.E))
+            if (!isKeyPressed && Input.GetKeyDown(KeyCode.E))
             {
                 isKeyPressed = true;
                 DoorAnimator.SetBool("Transition", true);
                 audioSource.Play();
                 StartCoroutine(MoveCharacterNextRoom());
-
-
-
+                // Animation triggering
+                if(animator != null)
+                {
+                    if (requriedLevel == LevelManager.instance.level && !animationCompleted)
+                    {
+                        animator.gameObject.SetActive(true);
+                        animator.SetBool(parameterName, true);
+                        animationCompleted = true;
+                    }
+                }
             }
 
             if(Input.GetKeyUp(KeyCode.E))
@@ -72,8 +83,6 @@ public class CollideInformer : MonoBehaviour
         yield return new WaitForSeconds(1);
         if (side == Side.Left)
         {
-            
-            //player.transform.position.x = player.transform.position.x - 1920f;
             player.transform.position += new Vector3(-5f, 0, 0);
             cam.transform.position += new Vector3(-15.75f, 0, 0);
         }
