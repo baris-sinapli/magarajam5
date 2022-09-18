@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectableObject : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class CollectableObject : MonoBehaviour
         {
             gameObject.SetActive(false);
             LevelManager.instance.levelUp(); 
+        }
+        if (triggerStay && Input.GetKey(KeyCode.U))
+        {
+            SceneManager.LoadScene("Scene02");
         }
     }
 
